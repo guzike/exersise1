@@ -96,4 +96,40 @@ public class ArrayOrdererTest {
         }
         return res;
     }
+
+    @Test
+    public void test4_1() {
+        Integer[] arr = new Integer[]{4,5,1,1,7};
+        GenericOrderer.sortAscending(arr);
+
+        Assert.assertEquals(1, arr[0].intValue());
+        Assert.assertEquals(1, arr[1].intValue());
+        Assert.assertEquals(4, arr[2].intValue());
+        Assert.assertEquals(5, arr[3].intValue());
+        Assert.assertEquals(7, arr[4].intValue());
+    }
+
+    @Test
+    public void test4_2() {
+        Double[] arr = new Double[]{4.5,5.1,1.4,1.3,7.6};
+        GenericOrderer.sortAscending(arr);
+
+        Assert.assertEquals(1.3, arr[0], 0);
+        Assert.assertEquals(1.4, arr[1], 0);
+        Assert.assertEquals(4.5, arr[2], 0);
+        Assert.assertEquals(5.1, arr[3], 0);
+        Assert.assertEquals(7.6, arr[4], 0);
+    }
+
+    @Test
+    public void test4_3() {
+        String[] arr = new String[]{"4","5","1","1","7"};
+        GenericOrderer.sortAscending(arr);
+
+        Assert.assertEquals("1", arr[0]);
+        Assert.assertEquals("1", arr[1]);
+        Assert.assertEquals("4", arr[2]);
+        Assert.assertEquals("5", arr[3]);
+        Assert.assertEquals("7", arr[4]);
+    }
 }

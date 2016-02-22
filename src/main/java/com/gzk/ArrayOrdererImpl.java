@@ -2,9 +2,6 @@ package com.gzk;
 
 public class ArrayOrdererImpl implements ArrayOrderer {
 
-    ArrayOrdererImpl() {
-    }
-
     public void sortAscending(int[] arr) {
         if (arr != null && arr.length > 0) {
 
